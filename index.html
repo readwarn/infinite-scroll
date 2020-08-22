@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Infinite Scroll</title>
+</head>
+<body>
+    <div id="app">
+        <audio id="myAudio">
+            <source src="bad-influence.mp3" type="audio/mpeg">
+          </audio>
+        <div class="head">
+            <h1>UNSPLASH API - Infinite Scroll</h1>
+            <div class="icon"> <i class="fa fa-play" @click="stop()" v-bind:class="{'fa-pause':play}"></i></div>
+        </div>
+        <div class="agba">
+            <div class="img-cont" v-for='(img, index) in images' :key='index' v-bind:style="boxstyle" id="box">
+                <img v-bind:id='index' :src='img.urls.regular' :alt='img.alt_description' :title='img.alt_description'></img>
+            </div> 
+        </div>
+        <div class="loader" v-bind:style='loader'>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+  <script src="app.js"></script>
+  <script src="vanilla.js"></script>  
+</body>
+</html>

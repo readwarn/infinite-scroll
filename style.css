@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Rose:wght@400;700&display=swap');
+
+html{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: 'Red Rose', cursive;
+    background: whitesmoke;
+    margin: 0;
+}
+div.agba{
+    margin-top: 113px;
+}
+div.head{
+    width:100%;
+    position: absolute;
+    z-index:1;
+    top: 0;
+    left: 0;
+}
+div.icon{
+    display: flex;
+    justify-content: center;
+}
+div.icon i{
+    color: #333;
+    font-size: 1.7rem;
+}
+h1{
+    font-weight: 700;
+    text-align: center;
+    margin: 1rem;
+    color: powderblue;
+}
+
+div.loader{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+div.loader div{
+    margin-right: 1.4rem;
+    width: 13px;
+    height: 13px;
+    background-color: slategrey;
+    border-radius: 100%;
+    animation: load 1.5s ease infinite;
+}
+div.loader div:nth-child(2){
+    animation-delay: 0.35s;
+}
+div.loader div:nth-child(3){
+    animation-delay: 0.7s;
+}
+div.img-cont{
+    margin: 25px 35%;
+    transition: all linear 0.1s;
+    position: relative;
+    /* 5 100 30 */
+}
+
+div.img-cont img{
+    height: 500px;
+    width: 100%;
+    border: red 1px solid;
+}
+.scroll{
+    animation: scroll 30s linear; 
+    animation-fill-mode: forwards;
+}
+.paused{
+    animation-play-state:paused;
+}
+
+@keyframes load{
+    0%{
+        background-color: slategrey;
+        transform: scale(1);
+    }
+    33%{
+        transform: scale(1.3);
+        background-color: rgb(38, 58, 78);
+    }
+    
+}
+@keyframes scroll{
+     0%{
+       transform: translateY(0);
+     }
+     100%{
+        transform: translateY(-4500px);
+     }
+}
+
+@media screen and (max-width:600px){
+    h1{
+        font-size:20px;
+    }
+    div.img-cont{
+        margin: 10px;
+    }
+}
