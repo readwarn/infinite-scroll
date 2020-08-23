@@ -9,3 +9,4 @@ icon.addEventListener('click',function(){
        myAudio.pause();
     }
 })
+

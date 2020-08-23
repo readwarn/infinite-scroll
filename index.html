@@ -16,11 +16,11 @@
           </audio>
         <div class="head">
             <h1>UNSPLASH API - Infinite Scroll</h1>
-            <div class="icon"> <i class="fa fa-play" @click="stop()" v-bind:class="{'fa-pause':play}"></i></div>
+            <div class="icon"> <i class="fa fa-play" @click='anime()' v-bind:class="{'fa-pause':play}"></i></div>
         </div>
-        <div class="agba">
-            <div class="img-cont" v-for='(img, index) in images' :key='index' v-bind:style="boxstyle" id="box">
-                <img v-bind:id='index' :src='img.urls.regular' :alt='img.alt_description' :title='img.alt_description'></img>
+        <div class="agba" v-bind:style="boxstyle" id="box">
+            <div class="img-cont" v-for='(img, index) in images' :key='index'>
+                <img v-bind:id='index' :src='img.urls.regular'></img>
             </div> 
         </div>
         <div class="loader" v-bind:style='loader'>

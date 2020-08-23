@@ -11,6 +11,10 @@ body{
     margin: 0;
 }
 div.agba{
+    border: red 1px solid;
+    transition: all linear;
+    position: relative;
+    margin: 25px 29%;
     margin-top: 113px;
 }
 div.head{
@@ -32,7 +36,7 @@ h1{
     font-weight: 700;
     text-align: center;
     margin: 1rem;
-    color: powderblue;
+    color: rgb(15, 100, 50);
 }
 
 div.loader{
@@ -56,16 +60,13 @@ div.loader div:nth-child(3){
     animation-delay: 0.7s;
 }
 div.img-cont{
-    margin: 25px 35%;
-    transition: all linear 0.1s;
-    position: relative;
+    margin: 25px 5%;
     /* 5 100 30 */
 }
 
 div.img-cont img{
     height: 500px;
     width: 100%;
-    border: red 1px solid;
 }
 .scroll{
     animation: scroll 30s linear; 
