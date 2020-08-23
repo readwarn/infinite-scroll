@@ -100,7 +100,9 @@ div.img-cont img{
     h1{
         font-size:20px;
     }
-    div.img-cont{
-        margin: 10px;
+    
+    div.agba{
+        margin: 25px 3%;
+        margin-top: 113px;
     }
 }
